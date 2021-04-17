@@ -1,68 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Live IPL - HimanshuRahi</title>
-
-  <!-- CSS  -->
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://materializecss.com/dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="https://materializecss.com/templates/starter-template/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-</head>
-<body>
-  <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Free IPL</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="https://drive.himanshurahi.com">Drive Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="https://drive.himanshurahi.com">Drive Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center orange-text">Watch IPL For Free</h1>
-      <div class="row center">
-        <h5 class="header col s12 light"></h5>
-      </div>
-
-      <div class="row center">
-	    <div class="video-container">
-        <iframe width="853" height="480" src="https://ipl-live.s3.ap-south-1.amazonaws.com/pkcast123.me_1/index2.m3u8" frameborder="0" allowfullscreen></iframe>
-      </div  >
-        <a  style = "margin-top : 20px;"href="http://www.facebook.com/sharer.php?u=https://ipl.himanshurahi.com" id="download-button" class="btn-large waves-effect waves-light orange">Share</a>
-      </div>
-      <br><br>
-
-    </div>
-  </div>
+<!-- CSS  -->
+ <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
 
 
-  <footer class="page-footer orange">
-    <div class="container">
-	<a href="http://www.facebook.com/sharer.php?u=https://ipl.himanshurahi.com" target="_blank">
-        <h6 style = "color : white;">Share With Your Friends</h6>
-    </a>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">HimanshuRahi</a>
-      </div>
-    </div>
-  </footer>
+<!-- HTML -->
+<video id='hls-example'  class="video-js vjs-default-skin" width="400" height="300" controls>
+<source type="application/x-mpegURL" src="http://www.streambox.fr/playlists/test_001/stream.m3u8">
+</video>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://materializecss.com/bin/materialize.js"></script>
-  <script src="https://materializecss.com/templates/starter-template/js/init.js"></script>
+<!-- JS code -->
+<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
 
-  </body>
-</html>
+<script>
+var player = videojs('hls-example');
+player.play();
+</script>
